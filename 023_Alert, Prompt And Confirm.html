@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alert, Prompt And Comfirm</title>
+</head>
+<body>
+    <span>Hello World</span>
+    <script>
+        alert("Enter the value of a")
+        let a = prompt("Enter a here", "570")   // --> You can give a second default value or argument in prompt.
+        a = Number.parseInt(a)
+        alert("The Type of a is " + (typeof a))
+
+        // Comfirm is used to confirm something from the user.
+
+        let write = confirm("Do you wanna write the value of a in the document?")   
+        if(write){
+            document.write(a)
+        }
+        else{
+            document.write("Allow me the permission.")
+        }
+
+        //Alert, Prompt And Confirm are not preferrable to use on Frontend User Websites. Modals are used instead.
+        // They can be used on the admin panel side if you don't wanna work hard and save time. 
+
+    </script>
+</body>
+</html>
