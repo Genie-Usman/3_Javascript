@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Children</title>
+</head>
+<body><div>   
+        <p>This is a Child of div</p>
+        <span>This is a Child of div and a Sibling of p</span>
+    </div>
+    <script>
+        console.log(document.body.firstChild);
+        console.log(document.body.lastChild);
+        console.log(document.body.childNodes);  
+
+        // Child Node List is'nt an Array but look like one. It can be converted into an Array using Array.from function.
+
+        let arr = Array.from(document.body.childNodes);
+        console.log(arr);
+
+        // Note : First Child sometimes show a text node because there's an invisible space after body tag.
+    </script>
+</body>
+</html>
