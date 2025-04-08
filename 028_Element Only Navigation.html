@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Element Only Navigation</title>
+    <style>
+        body{
+            padding: 0px;
+            margin: 0px;
+        }
+        ul{
+            display: flex;
+            background-color: grey;
+            margin: 0px;
+            padding: 20px 0px;
+        }
+        ul li{
+            list-style: none;
+            margin: 0px 20px;
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <ul>
+            <li>Home</li>
+            <li>About Us</li>
+            <li>Contact</li>
+        </ul>
+    </nav>
+    <script>
+        // Element only Navigation is used to access only elements instead of any node.
+        let b = document.body;
+        console.log("The first Node of body is = ", b.firstChild);
+        console.log("The first Element of body is = ", b.firstElementChild);
+    </script>
+</body>
+</html>
