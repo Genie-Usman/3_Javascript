@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>InnerHTML, OuterHTML And Other Properties</title>
+</head>
+<body>
+    <span id="first" hidden>Hi I Am A Span</span>
+    
+    <script>
+        // Differenece Between Console.log and Console.dir
+        let x = document.body.getElementsByTagName("span")[0];
+        console.log(x);
+        let y = document.body.getElementsByTagName("span")[0];
+        console.dir(y);
+        // Node Name
+        console.log(document.body.firstChild.nodeName);
+        console.log(document.body.firstElementChild.nodeName);
+        // InnerHTML ---> write the below statements in console.
+        first.innerHTML
+        first.innerHTML = "<i>Hello World</i>"
+        // OuterHTML
+        first.outerHTML
+        first.outerHTML = "<div>Hello World</div>"
+        // .textContent     ---> It is used to gain access of the inner text of an element of HTML body.
+        console.log(document.body.firstElementChild.textContent);
+        // hidden   ---> Hides an element
+        first.hidden = false;      // ---> To Unhide an element.
+
+    </script>
+</body>
+</html>
