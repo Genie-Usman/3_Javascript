@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Attribute Methods</title>
+</head>
+<body>
+    <div id="first" class="hey" data-game = "Mario" data-player = "Luigi">
+        Hi I'm a Container.
+    </div>
+
+    <script>
+        let first = document.getElementById("first");
+
+        // elem.getAttribute     ---> Used to get an attribute of an element.
+        let a = first.getAttribute("class");
+        console.log(a);
+        
+        // elem.hasAttribute     ---> Used to check existence of an attribute in an element.
+        console.log(first.hasAttribute("class"));
+        console.log(first.hasAttribute("style"));
+
+        // elem.setAttribute     ---> Used to set an attribute of an element.
+        console.log(first.setAttribute("hidden", "true"));
+
+        // elem.removeAttribute  ---> Used to remove an attribute of an element.
+        console.log(first.removeAttribute("hidden"));
+        console.log(first.removeAttribute("class"));
+
+        // elem.attributes       ---> Used to get the collection of attributes of an element.
+        console.log(first.attributes);
+
+        // Data-elem attributes  
+        /* We can always create customs attributes but the ones created with "data-" are reserved for programmer's use. They are available ina property named dataset.
+        If an element has an attribute "data-one", it is available as elem.data.one */
+        console.log(first.dataset);
+        console.log(first.dataset.game);
+        console.log(first.dataset.player);
+
+    </script>
+</body>
+</html>
