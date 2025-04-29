@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Insert Adjacent HTML/Element/Text</title>
+</head>
+<body>
+    <div class="first">
+        This is the First Element.
+    </div>
+
+    <script>
+        let first = document.body.getElementsByTagName("div");
+        first.insertAdjacentHTML('beforebegin',  '<div class="test">Before Begin</div>')
+        first.insertAdjacentHTML('beforeend',  '<div class="test">Before Begin</div>')
+        first.insertAdjacentHTML('afterbegin',  '<div class="test">Before Begin</div>')
+        first.insertAdjacentHTML('afterend',  '<div class="test">Before Begin</div>')
+        // This function is not working and the Console is throwing error saying it's not a function.
+    </script>
+</body>
+</html>
