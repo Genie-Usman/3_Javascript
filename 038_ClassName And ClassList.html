@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ClassName And ClassList</title>
+    <style>
+        .red{
+            background-color: red;
+            color: white;
+        }
+        .yellow{
+            background-color: yellow;
+            color: white;
+        }
+        .text-dark{
+            color: black;
+        }
+    </style>
+</head>
+<body>
+    <div id="first" class="yellow text-dark">
+        <span>Hi I Am Mani</span>
+    </div>
+
+    <script>
+        first.className = "text-dark red";       // ---> Used to add or replace classes
+        first.classList.remove("text-dark");     // ---> Used to remove a class
+        first.classList.add("yellow");           // ---> Used to add a class
+        first.classList.toggle("text-dark");     // ---> Used to add a class if it doesn't exist or remove if it exists.
+    </script>
+</body>
+</html>
