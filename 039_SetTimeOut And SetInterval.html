@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SetTimeOut And SetInterval</title>
+</head>
+<body>
+    <script>
+        // setTimeOut ---> Used to run Javascript after a delay. 
+        // With function
+        let a = setTimeout(function(){
+            alert("Set Time Out");
+        }, 3000);
+        let b = prompt("You wanna run Set Timeout? (y/n)");
+        if("n"==b){
+            clearTimeout(a);     //---> Used to clear a timeout function.
+        }
+
+        // With Arguments
+        const sum=(a,b)=>{
+            console.log("I'm running " + (a + b));
+        }
+        setTimeout(sum,3000, 5, 5)
+
+        // setInterval ---> Used to run JavaScript again and again after some time.
+        // With function
+        setInterval(function(){
+            alert("Set Interval");
+        },3000) 
+
+        // With Arguments
+        let greeting=(a,b)=>{
+            alert("Im running " + (a + b))
+        }
+        setInterval(greeting, 3000, 10, 10);
+    </script>
+</body>
+</html>
