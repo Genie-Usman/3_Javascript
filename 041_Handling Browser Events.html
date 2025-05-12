@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Handling Browser Events</title>
+</head>
+<body>
+    <button id="btn">Click Me</button>
+
+    <script>
+        // btn.addEventListener("click", function(e){        //--> Accepts 2 Parameters. event and handler.
+        //     alert("Hello World!")
+        // })
+        // btn.addEventListener("click", function(e){
+        //     alert("Hello World! 2")
+        // })
+
+        let x  = function(e){
+            alert("Hello World!")}
+        let y  = function(e){
+            alert("Hello World! 2")}
+            btn.addEventListener("click", x)
+        btn.addEventListener("click", y)
+        let a = prompt("Enter Your Favourite Number")
+        if(a=="2"){
+            btn.removeEventListener("click" , y) // --> To Use this, the object function must be same.
+        }
+    </script>
+</body>
+</html>
