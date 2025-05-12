@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Introduction to Events</title>
+</head>
+
+<!-- Important Browser Events -->
+<!-- Mouse Evenets : click , contextmenu (rightclick) , mouseover/mouseout, mousedown/mouseup, mousemove -->
+<!-- Keyboard Events : Keydown and Keyup -->
+<!-- Form Element Events : Submit , Focus etc -->
+<!-- Document Events : DOMContextLoaded -->
+
+<body>
+    <div class="container" >
+        <button onclick="console.log('The Button was Clicked');">Click Me</button>
+        <!-- JavaScript can be written in HTML but it's not preferrable since it's not maintainable. -->
+    </div>
+
+    <script>
+        let a = document.body.getElementsByClassName("container")[0];
+        a.onclick=()=>{
+        // let b = document.body.getElementsByClassName("container")[0];
+        // b.innerHTML = "Hello World"
+        a.innerHTML = "Hello World"
+        }
+    </script>
+</body>
+</html>
