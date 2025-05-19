@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Promise .then() And .catch ()</title>
+</head>
+<body>
+    <script>
+        let p1 = new Promise((resolve, reject)=>{
+            console.log("Promise 1 is pending");
+            setTimeout(function(){
+                console.log("Promise 1 is resolved");
+                resolve(true);
+            }, 3000)
+        })
+        let p2 = new Promise((resolve, reject)=>{
+            console.log("Promise 2 is pending");
+            setTimeout(function(){
+                console.log("Promise 2 is rejected");
+                reject("Error Occurred");
+            }, 3000)
+        })
+
+        console.log(p1);
+        console.log(p2);
+
+        p1.then((value)=>{
+            console.log(value);
+        })                                           //--> It can also be written as :
+        p2.catch((error)=>{
+            console.log(error);
+        })
+        
+        p1.then(alert)
+        p2.catch(alert)
+
+        p1.then((value)=>{
+            console.log(value);
+        }, (error)=>{
+            console.log("error");
+        })
+    </script>
+</body>
+</html>
