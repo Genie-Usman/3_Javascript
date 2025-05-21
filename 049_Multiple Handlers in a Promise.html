@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Attaching Multiple Handlers in a Promise</title>
+</head>
+
+<body>
+    <script>
+        /* Attaching Multiple Handlers is different from Promise Chaining Since in Promise Chaining, a value is
+        passed from one .then() to the next .then() while in attaching, all .then() functions
+        work independently. */
+
+        let p = new Promise((resolve, reject) => {
+            console.log("Promise is on it's Way!");
+            setTimeout(() => {
+                resolve("Congrats! The Promise is Resolved!")
+            }, 3000)
+        })
+        p.then((value) => {
+            console.log(value);
+        })
+        p.then(() => {
+            console.log("Hurray!");
+        })
+        p.then(() => {
+            console.log("Yayy!");
+        })
+
+
+        // Promise Chaining
+
+        let p1 = new Promise((resolve, reject) => {
+            console.log("Promise is on it's Way!");
+            setTimeout(() => {
+                resolve("Congrats! The Promise is Resolved!")
+            }, 3000)
+        })
+        p1.then((value) => {
+            console.log(value);
+            return new Promise((resolve, reject) => {
+                setTimeout(() => {
+                    resolve("Next Promise");
+                })
+            }, 2000)
+        }).then((value) => {
+            console.log(value);
+            console.log("Hurray!");
+        })
+    </script>
+</body>
+
+</html>
