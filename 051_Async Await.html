@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Async Await</title>
+</head>
+<body>
+    <script>
+        async function mani(){
+            let lahoreWeather = new Promise((resolve,reject)=>{
+                setTimeout(()=>{
+                    resolve("30 Degree");
+                }, 2000)
+            })
+            let karachiWeather = new Promise((resolve,reject)=>{
+                setTimeout(()=>{
+                    resolve("20 Degree");
+                }, 5000)
+            })
+            console.log("Fetching Lahore Weather. Please Wait ...");
+            let lahoreW = await lahoreWeather;
+            console.log("Fetched Lahore Weather is: " + lahoreW);
+            console.log("Fetching Karachi Weather. Please Wait ...");
+            let karachiW = await karachiWeather;
+            console.log("Fetched Karachi Weather is: " + karachiW);
+            return [lahoreW, karachiW]
+        }
+        
+        const shani =  async ()=>{
+            console.log("I'm a Promise and I'm waiting");
+        }
+
+        const weather = async()=>{
+            console.log("Welcome To Weather Control Room");
+            let a = await mani();
+            let b = await shani();
+        }
+        weather();
+    </script>
+</body>
+</html>
