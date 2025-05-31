@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Finally Clause</title>
+</head>
+<body>
+    <script>
+        const f = ()=>{
+            try {
+                console.log(program);
+                console.log("The Program is running successfully ...");
+                return
+            } catch (error) {
+                console.log("The Error is caught!");
+                // console.log(p);
+            }
+            finally{
+                console.log("I will be executed always whenever a try or catch block is executed.");
+
+                // finally is used for :
+                // Closing a file.
+                // Exiting a loop.
+                // Writing into a log file.
+
+                // Even if theres a "return" in try, the finally will still be executed.
+            }
+        }
+        f();
+        console.log("Program Ended!!!");
+    </script>
+</body>
+</html>
