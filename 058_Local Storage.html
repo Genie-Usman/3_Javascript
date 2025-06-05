@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Local Storage</title>
+</head>
+<body>
+    <script>
+        let key = prompt("Enter The Key");
+        let value = prompt("Enter The Value");
+
+        // localStorage.setItem() :
+        
+        localStorage.setItem(key, value);
+        localStorage.setItem("City", "Sargodha");
+
+        // localStorage.getItem() :
+        
+        console.log(`The value at ${key} is ${localStorage.getItem(key)}`);
+        
+        // localStorage.removeItem() :
+
+        if(key == "red" || key == "blue"){
+            localStorage.removeItem(key);
+        };
+        
+        // localStorage.clear() :
+
+        if(key == 0){
+            localStorage.clear();
+        };
+    </script>
+</body>
+</html>
