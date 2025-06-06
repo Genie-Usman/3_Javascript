@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Session Storage</title>
+</head>
+<body>
+    <script>
+         let key = prompt("Enter The Key");
+        let value = prompt("Enter The Value");
+
+        // sessionStorage.setItem() :
+        
+        sessionStorage.setItem(key, value);
+        sessionStorage.setItem("City", "Sargodha");
+
+        // sessionStorage.getItem() :
+        
+        console.log(`The value at ${key} is ${sessionStorage.getItem(key)}`);
+        
+        // sessionStorage.removeItem() :
+
+        if(key == "red" || key == "blue"){
+            sessionStorage.removeItem(key);
+        };
+        
+        // sessionStorage.clear() :
+
+        if(key == 0){
+            sessionStorage.clear();
+        };
+
+        // Storage Event :
+
+        //  When we storage something, a storage event is triggered which we can listen by using :
+
+        window.onstorage=(e)=>{
+            alert("changed");
+            console.log(e);
+        }
+    </script>
+</body>
+</html>
