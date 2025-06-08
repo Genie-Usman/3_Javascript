@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chapter 10 PS</title>
+</head>
+<body>
+    <script>
+        /* Q1. Create a note saving app which stores your note to local storage.*/
+
+        let a = prompt("Enter a note")
+        localStorage.setItem("note", a);
+
+        // Q2. Repeat the last question and fetch the note that was saved.
+
+        let n = localStorage.getItem("note")
+        alert(`Your note is ` + n);
+
+        // Q3. Delete the note in the previous question.
+        let p = confirm("Do You wanna delete this note?")
+        if(p){
+            localStorage.removeItem("note")
+            alert("Note deleted Successfully!")
+        }
+    </script>
+</body>
+</html>
