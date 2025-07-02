@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Proto And Prototype Object</title>
+</head>
+
+<body>
+    <script>
+        let a = {
+            name: "Mani",
+            language: "JavaScript",
+        };
+        console.log(a);
+        let p = {
+            run: () => {
+                alert("Run");
+            },
+        };
+        p.__proto__ = {
+            damage: "100%",
+        };
+        a.__proto__ = p;
+        // a.run();
+        console.log(a.damage + " Damage");
+    </script>
+</body>
+
+</html>
