@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>getter,setter and instanceof Operator</title>
+</head>
+
+<body>
+    <script>
+        class Animal {
+            constructor(name) {
+                this.name = name
+            }
+            walk() {
+                console.log(`${this.name} is walking...`);
+            }
+            get name() {
+                // ---> We use ._name to avoid the collision between properties/variables.
+                return this._name;
+            }
+            set name(newName) {
+                this._name = newName
+            }
+        }
+
+        let a = new Animal("Jack")
+        a.walk()
+        console.log(a.name);
+        a.name = "Bruno"
+        console.log(a.name);
+        let c = 50;
+        // Instanceof Operator:
+        // It is used to check if an object belongs to a class or not by giving result as true or false.
+
+        console.log(a instanceof Animal);
+        console.log(c instanceof Animal);
+    </script>
+</body>
+
+</html>

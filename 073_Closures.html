@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Closures</title>
+</head>
+
+<body>
+    <script>
+        // Closures :
+        /* A closure is the combination of a function bundled together (enclosed) with references to its
+        surrounding state (the lexical environment). In other words, a closure gives you access to an outer
+        function's scope from an inner function. */
+
+        // Simple Example :
+        function init() {
+            name = "Mozilla";   // --> It will pass the reference variable to closure, not the value.
+            function displayName() {
+                console.log(name);
+            }
+            name = "Mani";     // --> It will be printed because the reference variable is updated here.
+            return displayName;
+        }
+        let c = init();
+        c()
+
+        // Advance Example : 
+        let returnFunc = () => {
+            let x = () => {
+                let a = 1
+                console.log(a);
+                let y = () => {
+                    let a = 2
+                    console.log(a);
+                    let z = () => {
+                        let a = 3
+                        console.log(a);
+                    }
+                    z()
+                }
+                y()
+            }
+            x()
+        }
+        returnFunc();
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Destructuring Assignment and Spread Operator</title>
+</head>
+
+<body>
+    <script>
+        // Spread Operator => (...)
+
+        // Destructuring :
+        
+        // Instead of doing :
+        // let arr = [2, 5, 7, 8, 9, 10]
+        // let a= arr[0]
+        // let b= arr[1]
+        // let c= arr[2]
+        // let d= arr[3]
+
+        // I can do this :
+
+        let arr = [2, 5, 7, 8, 9, 10]
+        // let [a, b, c, d, e, f] = arr;
+        // console.log(a, b, c, d, e, f);
+
+        // I can also do this :
+
+        // let [a, b, c, ...rest] = arr;
+        // console.log(a, b, c, rest);
+
+        // I can do something like this too :
+
+        // let [a, , , ...rest] = arr;           // ---> This will not assign anything to the empty spaces.
+        // console.log(a, rest);
+
+        // We can also assign values by doing this :
+
+        let { a, b } = { a: 2, b: 5 }
+        console.log(a, b);
+
+        // To convert an array into an Object :
+
+        // let arr1 = ["Mani", "Hafsa", "Chand", "Ali"];
+        let arr2 = [2, 5, 10];
+        let obj = { ...arr2 }
+        console.log(obj);
+
+        sum = (v1, v2, v3) => {
+            return v1 + v2 + v3
+        }
+        console.log(sum(...arr2));
+
+        let obj2 = {
+            name: "Mani",
+            company: "Company XYZ",
+            address: "XYZ"
+        }
+        console.log({ ...obj2 });
+
+        // I can do this to overide some details in an object.
+
+        console.log({ ...obj2, name: "Hafsa", company: "ABC" });
+
+    </script>
+</body>
+
+</html>

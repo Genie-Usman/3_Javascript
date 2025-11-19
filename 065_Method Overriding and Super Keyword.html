@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Method Overriding and Super Keyword</title>
+</head>
+
+<body>
+    <script>
+        class Employee {
+            login() {
+                console.log(`The Employee has logged in...`);
+            }
+            logout() {
+                console.log(`The Employee has logged out...`);
+            }
+            requestLeaves(leaves) {
+                this.leaves = leaves;
+                console.log(`The Employee has requested for ${leaves} leaves - Auto Approved`);
+            }
+        }
+        class Programmer extends Employee {
+            requestCoffee(coffee) {
+                this.coffee = coffee
+                console.log(`The Employee has requested for ${coffee} coffee...`);
+            }
+
+            // Method Overrriding using Super Keyword : 
+
+            requestLeaves(leaves) {
+                super.requestLeaves(leaves + 1)
+                console.log(`One extra is granted`);
+            }
+        }
+
+        let mani = new Programmer;
+        mani.requestLeaves(10)
+    </script>
+</body>
+
+</html>

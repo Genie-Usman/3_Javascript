@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hoisting</title>
+</head>
+<body>
+    <script>
+        // The below lines will work because they are hoisted.
+        console.log(a);
+        greet()
+        function greet(){
+            console.log("Good Morning...!");
+        }
+        var a = 9;  // --> The variable is hoisted above but will not be initialized.
+        console.log(a);  
+
+
+        // Important Note :
+        // Hoisting will only work with var.
+        // It will not work with let or const.
+        // Hoising also doesn't work with function expressions and class expressions.
+
+        // Note :
+        /* Hoisting is (to many developers) an unknown or overlooked behaviour of JavaScript. If a 
+        Developer doesn't understand hoisting, program may contain bugs (errors).
+        To avoid bugs, always declare every variable at the beiginning of every scope.
+        Since this is how JavaScript interprets code, it is always a good rule. */
+    </script>
+</body>
+</html>

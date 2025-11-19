@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Constructors</title>
+</head>
+<body>
+    <script>
+          class RailwayForm{
+            constructor (name,trainno,address){
+                console.log("CONSTRUCTOR CALLED...!!!");
+                this.name = name;
+                this.trainno = trainno;
+                this.address = address;
+            }
+            preview(){
+                alert("Your Name is = " + this.name + " And You are bookin train ticket for train number = " + this.trainno + " With Address = " + this.address)
+            }
+            submit(){
+                alert("Your Form is Submitted " + this.name + " for train number = " + this.trainno + " With Address " + this.address)
+            }
+            cancel(){
+                this.trainno = 0;
+                alert("Your Form is Cancelled " + this.name + " for train number = " + this.trainno + " With Address " + this.address)
+            }
+        }
+        let maniForm = new RailwayForm("Mani", 2468, "House No.215, Lahore Road, Sargodha")
+        maniForm.preview()
+        maniForm.submit()
+        maniForm.cancel()
+    </script>
+</body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IIFE - Immediately Invoked Function Expressions</title>
+</head>
+<body>
+    <script>
+        let a = ()=>{
+            return new Promise((resolve, reject) => {
+                setTimeout(() => {
+                    resolve(456)
+                }, 2000);
+            })
+        }
+
+        // Syntax of IIFE :
+
+        /*(function(){
+            ...
+            ...
+            ...
+        })(); */
+
+        (async()=>{
+            let b = await a()
+            console.log(b);
+            let c = await a()              // --> Helpful for releasing meomory space after execution.
+            console.log(c);                // --> Immediately after IIFE is defined.
+            let d = await a()
+            console.log(d);
+        })();
+    </script>
+</body>
+</html>

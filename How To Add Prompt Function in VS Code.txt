@@ -1,0 +1,13 @@
+If You wanna add prompt function to VS Code.
+
+Open Your Project Folder.
+Create a ".js" file.
+Open Terminal.
+Write "npm init" and press Enter.
+Keep Pressing Enter until it's fully initialized. It will install a package.json file.
+After that, write "npm install prompt-sync" and press Enter. It will install a package-lock.json file.
+package-lock.json file will contain the necessary packages to run prompt function in VS Code.
+
+Whenever you wanna use prompt function in a project or file, write or copy the following to add it to your file.
+
+const prompt = require("prompt-sync")();
